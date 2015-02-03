@@ -241,7 +241,7 @@ public class GhprbRepository {
     }
 
     private static String getHookUrl() {
-        return Jenkins.getInstance().getRootUrl() + GhprbRootAction.URL + "/";
+        return Jenkins.getInstance().getHookUrl() + GhprbRootAction.URL + "/";
     }
 
     public GHPullRequest getPullRequest(int id) throws IOException {

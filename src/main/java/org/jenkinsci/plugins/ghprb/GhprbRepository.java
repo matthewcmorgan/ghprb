@@ -241,7 +241,7 @@ public class GhprbRepository {
     }
 
     private static String getHookUrl() {
-        return Jenkins.getInstance().getHookUrl() + GhprbRootAction.URL + "/";
+        return "http://vpn.liveopslabs.com/" + GhprbRootAction.URL + "/";
     }
 
     public GHPullRequest getPullRequest(int id) throws IOException {

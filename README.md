@@ -18,7 +18,7 @@ A new build can also be started with a comment: ``retest this please``.
 You can extend the standard build comment message on github 
 creating a comment file from shell console or any other 
 jenkins plugin. Contents of that file will be added to the comment on GitHub. 
-This is usefull for posting some build dependent urls for users without 
+This is useful for posting some build dependent urls for users without 
 access to the jenkins UI console.
 
 Jobs can be configured to only build if a matching comment is added to a pull request.  For instance, if you have two job you want to run against a pull request,
@@ -84,6 +84,24 @@ If you want to manually build the job, in the job setting check ``This build is 
 
 
 ### Updates
+
+#### -> 1.20
+* PullRequestMerger now notifies the taskListener of failures.
+* AutoCloseFailedPullRequest has been extracted from the published URL check.
+
+#### -> 1.19
+* More work for disabled builds.
+* Unified tabs to spaces.
+* Updates to the tests, and added some tests.
+
+#### -> 1.18
+* Add support for folder projects.
+* Correcting issue with default credentials.
+* Correcting issue with ghRepository being null when it shouldn't be.
+* Ignoring case when matching repo to url.
+* Changing the wording for pull requests that are mergeable.
+* Change requestForTesting phrase to a textArea.
+* Check if project is disabled, if it is then don't do anything.
 
 #### -> 1.14
 * A comment file can be created during the build and added to any comment made to the pull request.  podarok#33
